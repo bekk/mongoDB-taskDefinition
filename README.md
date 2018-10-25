@@ -15,9 +15,9 @@ Når du har restoret databasene må du også opprette brukerene på nytt:
 
 1. Logg deg inn på databasen: `mongo --username alice --password --authenticationDatabase admin --host mongodb0.examples.com --port 28015`
 
-1. 
+1. Opprett brukeren
    
-   ```
+    ```
    db.createUser(
       {
         user: "Invoice",
@@ -26,7 +26,7 @@ Når du har restoret databasene må du også opprette brukerene på nytt:
       }
    );
    
-   ```
+    ```
    
   
 
