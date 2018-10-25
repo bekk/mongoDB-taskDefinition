@@ -1,0 +1,108 @@
+{
+  "executionRoleArn": null,
+  "containerDefinitions": [
+    {
+      "dnsSearchDomains": null,
+      "logConfiguration": {
+        "logDriver": "awslogs",
+        "options": {
+          "awslogs-group": "databases-production",
+          "awslogs-region": "eu-central-1",
+          "awslogs-stream-prefix": "mongo-db-prod"
+        }
+      },
+      "entryPoint": null,
+      "portMappings": [
+        {
+          "hostPort": 27022,
+          "protocol": "tcp",
+          "containerPort": 27017
+        }
+      ],
+      "command": [],
+      "linuxParameters": null,
+      "cpu": 0,
+      "environment": [
+        {
+          "name": "MONGO_INITDB_ROOT_PASSWORD",
+          "value": "[PASSORD]"
+        },
+        {
+          "name": "MONGO_INITDB_ROOT_USERNAME",
+          "value": "root"
+        }
+      ],
+      "ulimits": null,
+      "dnsServers": null,
+      "mountPoints": [
+        {
+          "readOnly": null,
+          "containerPath": "/data/db",
+          "sourceVolume": "mongodb-production"
+        }
+      ],
+      "workingDirectory": null,
+      "dockerSecurityOptions": null,
+      "memory": null,
+      "memoryReservation": 800,
+      "volumesFrom": [],
+      "image": "registry.hub.docker.com/library/mongo:3.6.4-jessie",
+      "disableNetworking": null,
+      "interactive": null,
+      "healthCheck": null,
+      "essential": true,
+      "links": null,
+      "hostname": null,
+      "extraHosts": null,
+      "pseudoTerminal": null,
+      "user": null,
+      "readonlyRootFilesystem": null,
+      "dockerLabels": null,
+      "systemControls": null,
+      "privileged": null,
+      "name": "mongoDB-PRODUCTION"
+    }
+  ],
+  "placementConstraints": [],
+  "memory": "805",
+  "taskRoleArn": null,
+  "compatibilities": [
+    "EC2"
+  ],
+  "taskDefinitionArn": "arn:aws:ecs:eu-central-1:882089634282:task-definition/mongodb-production:7",
+  "family": "mongodb-production",
+  "requiresAttributes": [
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
+    },
+    {
+      "targetId": null,
+      "targetType": null,
+      "value": null,
+      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
+    }
+  ],
+  "requiresCompatibilities": [],
+  "networkMode": "bridge",
+  "cpu": null,
+  "revision": 7,
+  "status": "ACTIVE",
+  "volumes": [
+    {
+      "name": "mongodb-production",
+      "host": {
+        "sourcePath": "/data/db/mongo-prod"
+      },
+      "dockerVolumeConfiguration": null
+    }
+  ]
+}
