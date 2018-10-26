@@ -66,36 +66,10 @@
   "placementConstraints": [],
   "memory": "805",
   "taskRoleArn": null,
-  "compatibilities": [
-    "EC2"
-  ],
-  "taskDefinitionArn": "arn:aws:ecs:eu-central-1:882089634282:task-definition/mongodb-production:7",
   "family": "mongodb-production",
-  "requiresAttributes": [
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.logging-driver.awslogs"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.21"
-    },
-    {
-      "targetId": null,
-      "targetType": null,
-      "value": null,
-      "name": "com.amazonaws.ecs.capability.docker-remote-api.1.19"
-    }
-  ],
   "requiresCompatibilities": [],
   "networkMode": "bridge",
   "cpu": null,
-  "revision": 7,
-  "status": "ACTIVE",
   "volumes": [
     {
       "name": "mongodb-production",
