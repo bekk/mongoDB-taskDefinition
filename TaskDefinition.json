@@ -3,14 +3,7 @@
   "containerDefinitions": [
     {
       "dnsSearchDomains": null,
-      "logConfiguration": {
-        "logDriver": "awslogs",
-        "options": {
-          "awslogs-group": "databases-production",
-          "awslogs-region": "eu-central-1",
-          "awslogs-stream-prefix": "mongo-db-prod"
-        }
-      },
+      "logConfiguration": null,
       "entryPoint": null,
       "portMappings": [
         {
