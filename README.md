@@ -13,7 +13,7 @@ Hvordan du gjør det står beskrevet [https://developer.bekk.no/docs/dump-og-res
 
 Når du har restoret databasene må du også opprette brukerene på nytt: 
 
-1. Logg deg inn på databasen: `mongo --username alice --password --authenticationDatabase admin --host mongodb0.examples.com --port 28015`
+1. Logg deg inn på databasen: `mongo --username emil --password stordalen<3 --authenticationDatabase admin --host mongodb0.examples.com --port 28015`
 
 1. Opprett brukeren
    
